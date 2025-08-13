@@ -3,7 +3,7 @@ on: push
 env:
   docker_username: tesatec
   docker_password: ${{ secrets.GITHUB_TOKEN }}
-  GIT_COMMIT ${{github.sha}}
+  GIT_COMMIT: ${{ github.sha }}
 jobs:
   Build:
     runs-on: ubuntu-latest
