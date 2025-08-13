@@ -1,5 +1,12 @@
 name: Main workflow
-on: push
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
 env:
   docker_username: tesatec
   docker_password: ${{ secrets.GITHUB_TOKEN }}
