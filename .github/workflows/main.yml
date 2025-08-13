@@ -16,6 +16,7 @@ jobs:
       - name: Test
         uses: actions/checkout@v4   
       - run: ci/unit-test-app.sh
+      
       - name: upload-to-repo
         uses: actions/upload-artifact@v4
         with: 
@@ -50,9 +51,9 @@ jobs:
           name: code
           path: .
 
-      - name: build docker
+      - name: Build docker
         run: bash ci/build-docker.sh
-      - name: push Docker
+      - name: Push docker
         run: bash ci/push-docker.sh
   
     
